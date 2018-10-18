@@ -194,7 +194,16 @@ const unique = function(givenSet){
   return uniqueSet;
 }
 
-
+//....Union - Given two arrays, generate a new array consisting of unique elements across both those arrays.
+const union = function(set1,set2){
+  let unionSet = unique(set1);
+  for(let element of set2){
+    if(unionSet.indexOf(element) == -1){
+      unionSet.push(element);
+    }
+  }
+  return unionSet;
+}
 
 
 
@@ -233,3 +242,4 @@ exports.findSum = findSum;
 exports.findAverage = findAverage;
 exports.findIndexOf = findIndexOf;
 exports.unique = unique;
+exports.union = union;

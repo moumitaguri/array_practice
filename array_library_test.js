@@ -118,3 +118,11 @@ input = ["a","b","a","c","a"];
 expected = ["a","b","c"];
 assert.deepEqual(lib.unique(input),expected);
 assert.deepEqual(lib.unique([]),[]);
+
+
+//..Union - Given two arrays, generate a new array consisting of unique elements across both those arrays.
+set1 = [1,0];
+set2 = [1,1,0];
+expected = [1,0];
+assert.deepEqual(lib.union(set1,set2),expected);
+assert.deepEqual(lib.union([],[]),[]);
