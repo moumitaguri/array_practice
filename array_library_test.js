@@ -108,7 +108,13 @@ assert.equal(lib.findIndexOf([],1),);
 assert.equal(lib.findIndexOf(numbers,1),0);
 
 //..Unique - Given an array, remove duplicate elements and return an array of only unique elements.
+  //similar element
 numbers = [1,1];
 expected = [1];
 assert.deepEqual(lib.unique(numbers),expected);
-
+assert.deepEqual(lib.unique([]),[]);
+  //string element
+input = ["a","b","a","c","a"];
+expected = ["a","b","c"];
+assert.deepEqual(lib.unique(input),expected);
+assert.deepEqual(lib.unique([]),[]);

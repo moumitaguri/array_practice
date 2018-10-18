@@ -20,7 +20,7 @@ const selectEven = function(numbers){
 const selectOdd = function(numbers){
   let odd = [];
   for(let number of numbers){
-    if(isEven(number)==false){
+    if(!isEven(number)){
       odd.push(number);
     }
   }
