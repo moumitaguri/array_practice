@@ -183,6 +183,32 @@ const findIndexOf = function(numberList,numberToFind){
 }
 
 
+//.....Unique - Given an array, remove duplicate elements and return an array of only unique elements.
+const unique = function(givenSet){
+  let uniqueSet = [];
+  for(let element of givenSet){
+    if(uniqueSet.indexOf(element) == -1){
+      uniqueSet.push(element);
+    }
+  }
+  return uniqueSet;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -206,3 +232,4 @@ exports.findSmallest = findSmallest;
 exports.findSum = findSum;
 exports.findAverage = findAverage;
 exports.findIndexOf = findIndexOf;
+exports.unique = unique;
