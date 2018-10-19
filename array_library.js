@@ -208,9 +208,9 @@ const union = function(set1,set2){
 
 //...Difference - Given two arrays, generate a new array that consists of unique elements that are present in the first array, but not in the second.
 const difference = function(set1,set2){
-  let unisueSet1 = unique(set1)
+  let uniqueSet1 = unique(set1)
   let differenceSet = [];
-  for(let element of unisueSet1 ){
+  for(let element of uniqueSet1 ){
     if(!set2.includes(element)){
       differenceSet.push(element);
     }
@@ -219,8 +219,28 @@ const difference = function(set1,set2){
 }
 
 
+//...Zip - insert elements from two arrays as follows:
+const zip = function(set1,set2){
+  let zipSet = [];
+  for(let index=0;index <set2.length;index++){
+    zipSet.push([set1[index],set2[index]]);
+  }
+  return zipSet;
+}
 
 
+//....Rotate - creates a new array by rotating elements from the given array.
+const rotate = function(givenSet,rotatingItem){
+  let rotatedSet = [];
+  let indexToStartRotate = givenSet.indexOf(rotatingItem)+1;
+  for(let index = indexToStartRotate;index < givenSet.length;index++){
+    rotatedSet.push(givenSet[index]);
+  }
+  for(index=0;index < indexToStartRotate;index++){
+    rotatedSet.push(givenSet[index]);
+  }
+  return rotatedSet;
+}
 
 
 
@@ -256,3 +276,5 @@ exports.findIndexOf = findIndexOf;
 exports.unique = unique;
 exports.union = union;
 exports.difference = difference;
+exports.zip = zip;
+exports.rotate = rotate;

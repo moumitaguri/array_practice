@@ -134,3 +134,15 @@ assert.deepEqual(lib.difference([],[]),[]);
 assert.deepEqual(lib.difference([0,1],[1]),[0]);
 assert.deepEqual(lib.difference([0,1,4,5,0],[6,1]),[0,4,5]);
 
+
+
+//...Zip - insert elements from two arrays as follows:
+assert.deepEqual(lib.zip([1,2,3],[4,5]),[[1,4],[2,5]]);
+assert.deepEqual(lib.zip([1,2,3],[4,5,6]),[[1,4],[2,5],[3,6]]);
+
+
+//...Rotate - creates a new array by rotating elements from the given array.
+assert.deepEqual(lib.rotate([1,2,3,4,5],2),[3,4,5,1,2]);
+assert.deepEqual(lib.rotate([1,2,3,4,5],4),[5,1,2,3,4]);
+
+
