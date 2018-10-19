@@ -159,3 +159,8 @@ assert.deepEqual(lib.partition([3,3,3,3],2),[[],[3,3,3,3]]);
 //.....tests for aboveThreshold and belowThreshold
 assert.deepEqual(lib.numbersAboveThreshold([1,0,4,2,3],2),[4,3]);
 assert.deepEqual(lib.numbersBelowThreshold([1,0,4,2,3],2),[1,0]);
+
+
+//...Extract digits - Given a number, extract the digits of a number into an array
+
+assert.deepEqual(lib.extractDigits(123),[1,2,3]);

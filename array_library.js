@@ -279,6 +279,21 @@ const partition = function(givenList,threshold){
   return partitioned;
 }
 
+//...Extract digits - Given a number, extract the digits of a number into an array
+const extractDigits = function(givenNumber){
+  let extracted = [];
+  let givenNumInString = givenNumber.toString();
+  for(digit=0;digit < givenNumInString.length; digit++){
+    extracted.push(+givenNumInString[digit]);
+  }
+  return extracted;
+}
+
+
+
+
+
+
 
 
 
@@ -313,3 +328,4 @@ exports.rotate = rotate;
 exports.numbersAboveThreshold = numbersAboveThreshold;
 exports.numbersBelowThreshold = numbersBelowThreshold;
 exports.partition = partition;
+exports.extractDigits = extractDigits;
