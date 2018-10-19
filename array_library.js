@@ -254,14 +254,11 @@ const zip = function(set1,set2){
 
 
 //....Rotate - creates a new array by rotating elements from the given array.
-const rotate = function(givenSet,rotatingItem){
-  let rotatedSet = [];
-  let indexToStartRotate = givenSet.indexOf(rotatingItem)+1;
-  for(let index = indexToStartRotate;index < givenSet.length;index++){
-    rotatedSet.push(givenSet[index]);
-  }
-  for(index=0;index < indexToStartRotate;index++){
-    rotatedSet.push(givenSet[index]);
+const rotate = function(givenSet,rotatingPosition){
+  let rotatedSet = givenSet;
+  for(index = 0;index < rotatingPosition; index++){
+    rotatedSet.push(givenSet[0]);
+    rotatedSet.shift();
   }
   return rotatedSet;
 }
