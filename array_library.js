@@ -73,6 +73,11 @@ const isSmaller = function(num1,num2) {
   return num1 < num2;
 }
 
+//..
+const isSmallerOrEqual = function(num1,num2) {
+  return num1 <= num2;
+}
+
 //....counts how many numbers above a certain threshold.....
 const countNumbersAbove = function(numbers,threshold) {
   counterAboveThreshold = 0;
@@ -113,7 +118,7 @@ const countNumbersBelow = function(numbers,threshold) {
 const numbersBelowThreshold = function(numbers,threshold) {
   let arrayBelowThreshold = [];
   for(number of numbers){
-    if(isSmaller(number,threshold)){
+    if(isSmallerOrEqual(number,threshold)){
       arrayBelowThreshold.push(number);
     }
   }
@@ -320,33 +325,21 @@ const isSubset = function(array1,array2){
 
 const reverseFib = function(term){
   let fibSeries = [];
-  let firstValue = -1;
-  let secondValue = 1;
+  let prevTerm = -1;
+  let nextTerm = 1;
   for(let termIndex = 0; termIndex < term; termIndex++){
-    let fibTerm = (firstValue+secondValue);
+    let fibTerm = (prevTerm+nextTerm);
     fibSeries.push(fibTerm);
-    firstValue = secondValue;
-    secondValue = fibTerm;
+    prevTerm = nextTerm;
+    nextTerm = fibTerm;
   }
   return reverse(fibSeries);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
   
 module.exports = {
  isEven,
- selectEven
+ selectEven,
  selectOdd,
  countEvenNumbers,
  countOddNumbers,
