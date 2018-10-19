@@ -185,6 +185,12 @@ assert.deepEqual(lib.isSubset([1,2],[3]),false);
 assert.deepEqual(lib.isSubset([1,2],[]),true);
 
 
+//...Reverse Fibonacci - Generate a fibonacci sequence of length n in reverse order
+assert.deepEqual(lib.reverseFib(1),[0]);
+assert.deepEqual(lib.reverseFib(2),[1,0]);
+assert.deepEqual(lib.reverseFib(3),[1,1,0]);
+
+
 
 
 

@@ -322,6 +322,25 @@ const isSubset = function(array1,array2){
 
 
 
+const reverseFib = function(term){
+  let fibSeries = [];
+  let firstValue = -1;
+  let secondValue = 1;
+  for(let termIndex = 0; termIndex < term; termIndex++){
+    let fibTerm = (firstValue+secondValue);
+    fibSeries.push(fibTerm);
+    firstValue = secondValue;
+    secondValue = fibTerm;
+  }
+  return reverse(fibSeries);
+}
+
+
+
+
+
+
+
 
 
 
@@ -359,3 +378,4 @@ exports.extractDigits = extractDigits;
 exports.isInDecending = isInDecending;
 exports.isInAscending = isInAscending;
 exports.isSubset = isSubset;
+exports.reverseFib = reverseFib;
