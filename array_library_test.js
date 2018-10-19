@@ -152,6 +152,7 @@ assert.deepEqual(lib.rotate([1,2,3,4,5],4),[5,1,2,3,4]);
 assert.deepEqual(lib.partition([]),[[],[]]);
 assert.deepEqual(lib.partition([1,2,3,4,5,6,7],3),[[1,2],[4,5,6,7]]);
 assert.deepEqual(lib.partition([3,3,3,3],3),[[],[]]);
+assert.deepEqual(lib.partition([3,3,3,3],2),[[],[3,3,3,3]]);
 
 
 
