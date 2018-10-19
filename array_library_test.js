@@ -173,7 +173,7 @@ assert.deepEqual(lib.isInDecending([1,3,2]),false);
 assert.deepEqual(lib.isInDecending([3,2]),true);
 
 //..Ascending order - Given an array of numbers, check if the array is in ascending order
-//assert.deepEqual(lib.isInDecending([3,2]),true);
+assert.deepEqual(lib.isInAscending([]),true);
 
 
 

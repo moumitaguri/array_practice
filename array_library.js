@@ -299,6 +299,14 @@ const isInDecending = function(numbers){
   return true;
 }
 
+const isInAscending = function(numbers){
+  for(let index = 0;index < numbers.length-1; index++){
+    if(numbers[index] > numbers[index+1]){
+      return false;
+    }
+  }
+  return true;
+}
 
 
 
@@ -340,3 +348,4 @@ exports.numbersBelowThreshold = numbersBelowThreshold;
 exports.partition = partition;
 exports.extractDigits = extractDigits;
 exports.isInDecending = isInDecending;
+exports.isInAscending = isInAscending;
