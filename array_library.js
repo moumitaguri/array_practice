@@ -344,34 +344,36 @@ const reverseFib = function(term){
 
 
   
-exports.isEven = isEven;
-exports.selectEven = selectEven;
-exports.selectOdd = selectOdd;
-exports.countEvenNumbers = countEvenNumbers;
-exports.countOddNumbers = countOddNumbers;
-exports.mapLength = mapLength;
-exports.isGreater = isGreater;
-exports.isSmaller = isSmaller;
-exports.countNumbersAbove = countNumbersAbove;
-exports.countNumbersBelow = countNumbersBelow;
-exports.intersect = intersect;
-exports.selectEverySecondElement = selectEverySecondElement;
-exports.reverse = reverse;
-exports.findGreatest = findGreatest;
-exports.findSmallest = findSmallest;
-exports.findSum = findSum;
-exports.findAverage = findAverage;
-exports.findIndexOf = findIndexOf;
-exports.unique = unique;
-exports.union = union;
-exports.difference = difference;
-exports.zip = zip;
-exports.rotate = rotate;
-exports.numbersAboveThreshold = numbersAboveThreshold;
-exports.numbersBelowThreshold = numbersBelowThreshold;
-exports.partition = partition;
-exports.extractDigits = extractDigits;
-exports.isInDecending = isInDecending;
-exports.isInAscending = isInAscending;
-exports.isSubset = isSubset;
-exports.reverseFib = reverseFib;
+module.exports = {
+ isEven,
+ selectEven
+ selectOdd,
+ countEvenNumbers,
+ countOddNumbers,
+ mapLength,
+ isGreater,
+ isSmaller,
+ countNumbersAbove,
+ countNumbersBelow,
+ intersect,
+ selectEverySecondElement,
+ reverse,
+ findGreatest,
+ findSmallest,
+ findSum,
+ findAverage,
+ findIndexOf,
+ unique,
+ union,
+ difference,
+ zip,
+ rotate,
+ numbersAboveThreshold,
+ numbersBelowThreshold,
+ partition,
+ extractDigits,
+ isInDecending,
+ isInAscending,
+ isSubset,
+ reverseFib
+};
