@@ -206,6 +206,18 @@ const union = function(set1,set2){
 }
 
 
+//...Difference - Given two arrays, generate a new array that consists of unique elements that are present in the first array, but not in the second.
+const difference = function(set1,set2){
+  let unisueSet1 = unique(set1)
+  let differenceSet = [];
+  for(let element of unisueSet1 ){
+    if(!set2.includes(element)){
+      differenceSet.push(element);
+    }
+  }
+  return differenceSet;
+}
+
 
 
 
@@ -243,3 +255,4 @@ exports.findAverage = findAverage;
 exports.findIndexOf = findIndexOf;
 exports.unique = unique;
 exports.union = union;
+exports.difference = difference;

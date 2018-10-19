@@ -126,3 +126,11 @@ set2 = [1,1,0];
 expected = [1,0];
 assert.deepEqual(lib.union(set1,set2),expected);
 assert.deepEqual(lib.union([],[]),[]);
+assert.deepEqual(lib.union([0,0],[0,0]),[0]);
+
+
+//..Difference - Given two arrays, generate a new array that consists of unique elements that are present in the first array, but not in the second.
+assert.deepEqual(lib.difference([],[]),[]);
+assert.deepEqual(lib.difference([0,1],[1]),[0]);
+assert.deepEqual(lib.difference([0,1,4,5,0],[6,1]),[0,4,5]);
+
