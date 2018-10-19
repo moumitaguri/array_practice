@@ -289,6 +289,16 @@ const extractDigits = function(givenNumber){
   return extracted;
 }
 
+//..Descending order - Given an array of numbers, check if the array is in descending order
+const isInDecending = function(numbers){
+  for(let index = 0;index < numbers.length-1; index++){
+    if(numbers[index] < numbers[index+1]){
+      return false;
+    }
+  }
+  return true;
+}
+
 
 
 
@@ -329,3 +339,4 @@ exports.numbersAboveThreshold = numbersAboveThreshold;
 exports.numbersBelowThreshold = numbersBelowThreshold;
 exports.partition = partition;
 exports.extractDigits = extractDigits;
+exports.isInDecending = isInDecending;

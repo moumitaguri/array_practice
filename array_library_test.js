@@ -164,3 +164,11 @@ assert.deepEqual(lib.numbersBelowThreshold([1,0,4,2,3],2),[1,0]);
 //...Extract digits - Given a number, extract the digits of a number into an array
 
 assert.deepEqual(lib.extractDigits(123),[1,2,3]);
+
+
+//..Descending order - Given an array of numbers, check if the array is in descending order
+assert.deepEqual(lib.isInDecending([1,2,3]),false);
+assert.deepEqual(lib.isInDecending([1,3,2]),false);
+assert.deepEqual(lib.isInDecending([3,2]),true);
+
+
