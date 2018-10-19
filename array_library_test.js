@@ -180,6 +180,7 @@ assert.deepEqual(lib.isInAscending([2,1]),false);
 
 //..isSubset - Given two arrays, check if the second is a proper subset of the first.
 assert.deepEqual(lib.isSubset([],[]),true);
+assert.deepEqual(lib.isSubset([1,2],[1]),true);
 
 
 
