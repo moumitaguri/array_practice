@@ -182,6 +182,7 @@ assert.deepEqual(lib.isInAscending([2,1]),false);
 assert.deepEqual(lib.isSubset([],[]),true);
 assert.deepEqual(lib.isSubset([1,2],[1]),true);
 assert.deepEqual(lib.isSubset([1,2],[3]),false);
+assert.deepEqual(lib.isSubset([1,2],[]),true);
 
 
 
