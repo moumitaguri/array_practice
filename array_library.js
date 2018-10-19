@@ -309,7 +309,16 @@ const isInAscending = function(numbers){
 }
 
 
-
+const isSubset = function(array1,array2){
+  let set1 = unique(array1);
+  let set2 = unique(array2);
+  for(let item of set2){
+    if(!set1.includes(item)){
+      return false;
+    }
+  }
+  return true;
+}
 
 
 
@@ -349,3 +358,4 @@ exports.partition = partition;
 exports.extractDigits = extractDigits;
 exports.isInDecending = isInDecending;
 exports.isInAscending = isInAscending;
+exports.isSubset = isSubset;
