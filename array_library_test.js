@@ -146,3 +146,15 @@ assert.deepEqual(lib.rotate([1,2,3,4,5],2),[3,4,5,1,2]);
 assert.deepEqual(lib.rotate([1,2,3,4,5],4),[5,1,2,3,4]);
 
 
+
+//...Partition - Given an array of numbers, it returns a partitioned array consisting of numbers above a certain number and below a certain number
+
+assert.deepEqual(lib.partition([]),[[],[]]);
+assert.deepEqual(lib.partition([1,2,3,4,5,6,7],3),[[1,2],[4,5,6,7]]);
+assert.deepEqual(lib.partition([3,3,3,3],3),[[],[]]);
+
+
+
+//.....tests for aboveThreshold and belowThreshold
+assert.deepEqual(lib.numbersAboveThreshold([1,0,4,2,3],2),[4,3]);
+assert.deepEqual(lib.numbersBelowThreshold([1,0,4,2,3],2),[1,0]);

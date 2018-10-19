@@ -86,6 +86,19 @@ const countNumbersAbove = function(numbers,threshold) {
 }
 
 
+//.... new array having numbers above a certain threshold.....
+const numbersAboveThreshold = function(numbers,threshold) {
+  let arrayAboveThreshold = [];
+  for(number of numbers){
+    if(isGreater(number,threshold)){
+      arrayAboveThreshold.push(number);
+    }
+  }
+  return arrayAboveThreshold;
+}
+
+
+
 //....counts how many numbers below a certain threshold.....
 const countNumbersBelow = function(numbers,threshold) {
   counterBelowThreshold = 0;
@@ -95,6 +108,18 @@ const countNumbersBelow = function(numbers,threshold) {
     }
   }
   return counterBelowThreshold;
+}
+
+
+//....numbers below a certain threshold.....
+const numbersBelowThreshold = function(numbers,threshold) {
+  let arrayBelowThreshold = [];
+  for(number of numbers){
+    if(isSmaller(number,threshold)){
+      arrayBelowThreshold.push(number);
+    }
+  }
+  return arrayBelowThreshold;
 }
 
 
@@ -243,9 +268,16 @@ const rotate = function(givenSet,rotatingItem){
 }
 
 
+//...Partition - Given an array of numbers, it returns a partitioned array consisting of numbers above a certain number and below a certain number
 
-
-
+const partition = function(givenList,threshold){
+  let partitioned = [];
+  let belowThreshold = numbersBelowThreshold(givenList,threshold);
+  let aboveThreshold = numbersAboveThreshold(givenList,threshold);
+  partitioned.push(belowThreshold);
+  partitioned.push(aboveThreshold);
+  return partitioned;
+}
 
 
 
@@ -278,3 +310,6 @@ exports.union = union;
 exports.difference = difference;
 exports.zip = zip;
 exports.rotate = rotate;
+exports.numbersAboveThreshold = numbersAboveThreshold;
+exports.numbersBelowThreshold = numbersBelowThreshold;
+exports.partition = partition;
