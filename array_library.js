@@ -40,7 +40,6 @@ const countEvenNumbers = function(numbers) {
 }
 
 
-
 //......counts odd numbers from a given number of list......
 const countOddNumbers = function(numbers) {
   let countOdd = 0;
@@ -96,7 +95,6 @@ const numbersAboveThreshold = function(numbers,threshold) {
   }
   return arrayAboveThreshold;
 }
-
 
 
 //....counts how many numbers below a certain threshold.....
@@ -205,6 +203,7 @@ const findIndexOf = function(numberList,numberToFind){
       return number;
     }
   }
+  return -1
 }
 
 

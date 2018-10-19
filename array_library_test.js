@@ -104,8 +104,9 @@ assert.equal(lib.findAverage(numbers),average);
 //..Index Of a Number - Given an array of numbers find the first position of a specified number
 numbers = [1,4,2,3,7,3,2,1,4];
 assert.equal(lib.findIndexOf(numbers,3),3);
-assert.equal(lib.findIndexOf([],1),);
+assert.equal(lib.findIndexOf([],1),-1);
 assert.equal(lib.findIndexOf(numbers,1),0);
+assert.equal(lib.findIndexOf([0,3],1),-1);
 
 //..Unique - Given an array, remove duplicate elements and return an array of only unique elements.
   //similar element
