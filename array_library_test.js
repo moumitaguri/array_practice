@@ -3,14 +3,15 @@ const lib = require('./array_library.js');
 
 assert.equal(lib.isEven(3),false);
 assert.equal(lib.isEven(4),true);
-assert.deepEqual(lib.selectEven([]),[]);
-assert.deepEqual(lib.selectEven([1]),[]);
-assert.deepEqual(lib.selectEven([1,2,-2,0]),[2,-2,0]);
+
+assert.deepEqual(lib.filterEven([]),[]);
+assert.deepEqual(lib.filterEven([1]),[]);
+assert.deepEqual(lib.filterEven([1,2,-2,0]),[2,-2,0]);
 
 
-assert.deepEqual(lib.selectOdd([1]),[1]);
-assert.deepEqual(lib.selectOdd([4]),[]);
-assert.deepEqual(lib.selectOdd([1,2,-2,0,-3,3,5,4]),[1,-3,3,5]);
+assert.deepEqual(lib.filterOdd([1]),[1]);
+assert.deepEqual(lib.filterOdd([4]),[]);
+assert.deepEqual(lib.filterOdd([1,2,-2,0,-3,3,5,4]),[1,-3,3,5]);
 
 
 
@@ -190,7 +191,11 @@ assert.deepEqual(lib.reverseFib(1),[0]);
 assert.deepEqual(lib.reverseFib(2),[1,0]);
 assert.deepEqual(lib.reverseFib(3),[1,1,0]);
 
-
+//....filter even numbers
+list = [1,5,2,6,7,8,3,10];
+evenList = [2,6,8,10];
+assert.deepEqual(lib.filterEven([]),[]);
+assert.deepEqual(lib.filterEven(list),evenList);
 
 
 

@@ -3,29 +3,20 @@ const isEven = function(number){
   return (number%2 == 0);
 }
 
+const isOdd = function(number){
+  return (number%2 != 0);
+}
+
 
 //.......extracts even numbers from a given list of number......
-const selectEven = function(numbers){
-  let even = [];
-  for(let number of numbers){
-    if(isEven(number)){
-      even.push(number);
-    }
-  }
-    return even;
- }
-
+const filterEven = function(numberList){
+  return numberList.filter(isEven);
+}
 
 //.......extracts odd numbers from a given list of number......
-const selectOdd = function(numbers){
-  let odd = [];
-  for(let number of numbers){
-    if(!isEven(number)){
-      odd.push(number);
-    }
-  }
-    return odd;
- }
+const filterOdd = function(numberList){
+  return numberList.filter(isOdd);
+}
 
 
 //......counts even numbers from a given number of list......
@@ -339,8 +330,8 @@ const reverseFib = function(term){
   
 module.exports = {
  isEven,
- selectEven,
- selectOdd,
+ filterEven,
+ filterOdd,
  countEvenNumbers,
  countOddNumbers,
  mapLength,
@@ -368,5 +359,5 @@ module.exports = {
  isInDecending,
  isInAscending,
  isSubset,
- reverseFib
+ reverseFib,
 };
