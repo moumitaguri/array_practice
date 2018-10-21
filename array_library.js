@@ -7,7 +7,6 @@ const isOdd = function(number){
   return (number%2 != 0);
 }
 
-
 //.......extracts even numbers from a given list of number......
 const filterEven = function(numberList){
   return numberList.filter(isEven);
@@ -20,26 +19,14 @@ const filterOdd = function(numberList){
 
 
 //......counts even numbers from a given number of list......
-const countEvenNumbers = function(numbers) {
-  let countEven = 0;
-  for(let number of numbers){
-    if(isEven(number)){
-      countEven++;
-    }
-  }
-  return countEven;
+const countEvenNumbers = function(numberList) {
+  return numberList.filter(isEven).length;
 }
 
 
 //......counts odd numbers from a given number of list......
-const countOddNumbers = function(numbers) {
-  let countOdd = 0;
-  for(let number of numbers){
-    if(isEven(number)==false){
-      countOdd++;
-    }
-  }
-  return countOdd;
+const countOddNumbers = function(numberList) {
+  return numberList.filter(isOdd).length;
 }
 
 
