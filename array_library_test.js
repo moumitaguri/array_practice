@@ -80,6 +80,9 @@ assert.deepEqual(lib.reverse(input),expected);
 assert.equal(lib.findGreatest([]),);
 assert.equal(lib.findGreatest([3,5,7]),7);
 assert.equal(lib.findGreatest([1,1]),1);
+assert.equal(lib.findLargestInList([3,5,7]),7);
+assert.equal(lib.findLargestInList([1,1]),1);
+
 
 //....find smallest number in a list...
 assert.equal(lib.findSmallest([]),);

@@ -137,6 +137,17 @@ const reverse = function(givenSet){
 
 
 //.....find greatest number in a list....
+const findLargest = function(num1,num2){
+  return num1 > num2 ? num1 : num2;
+}
+
+const findLargestInList = function(numberList){
+  return numberList.reduce(findLargest);
+}
+
+
+
+
 const findGreatest = function(givenList){
   let greatest = givenList[0];
   for(number of givenList){
@@ -347,4 +358,5 @@ module.exports = {
  isInAscending,
  isSubset,
  reverseFib,
+ findLargestInList
 };
