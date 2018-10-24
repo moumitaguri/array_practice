@@ -20,13 +20,13 @@ const filterOdd = function(numberList){
 
 //......counts even numbers from a given number of list......
 const countEvenNumbers = function(numberList) {
-  return numberList.filter(isEven).length;
+  return filterEven(numberList).length;
 }
 
 
 //......counts odd numbers from a given number of list......
 const countOddNumbers = function(numberList) {
-  return numberList.filter(isOdd).length;
+  return filterOdd(numberList).length;
 }
 
 
