@@ -146,8 +146,6 @@ const findLargestInList = function(numberList){
 }
 
 
-
-
 const findGreatest = function(givenList){
   let greatest = givenList[0];
   for(number of givenList){
@@ -161,6 +159,16 @@ const findGreatest = function(givenList){
 
 
 //.....find smallest number in a list....
+const finDSmallest = function(num1,num2){
+  return num1 < num2 ? num1 : num2;
+}
+
+const findSmallestInList = function(numberList){
+  return numberList.reduce(finDSmallest);
+}
+
+
+
 const findSmallest = function(givenList){
   let smallest = givenList[0];
   for(number of givenList){
@@ -358,5 +366,6 @@ module.exports = {
  isInAscending,
  isSubset,
  reverseFib,
- findLargestInList
+ findLargestInList,
+ findSmallestInList
 };

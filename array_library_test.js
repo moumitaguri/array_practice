@@ -90,6 +90,10 @@ assert.equal(lib.findSmallest([3,5,7]),3);
 assert.equal(lib.findSmallest([1,1]),1);
 assert.equal(lib.findSmallest([26,3,1,5]),1);
 
+assert.equal(lib.findSmallestInList([3,5,7]),3);
+assert.equal(lib.findSmallestInList([1,1]),1);
+assert.equal(lib.findSmallestInList([26,3,1,5]),1);
+
 
 
 //....sum of a list of numbers....
