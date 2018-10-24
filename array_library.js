@@ -70,7 +70,7 @@ const countAboveThreshold = function(givenList,threshold){
 }
 
 
-
+//....counts how many numbers below a certain threshold.....
 const findNumbersBelowThreshold = function(threshold){
   return function(num){
     return num < threshold;
@@ -82,16 +82,6 @@ const countBelowThreshold = function(givenList,threshold){
   return givenList.filter(findBelowThreshold).length;
 }
 
-
-const countNumbersAbove = function(numbers,threshold) {
-  counterAboveThreshold = 0;
-  for(number of numbers){
-    if(isGreater(number,threshold)){
-      counterAboveThreshold++;
-    }
-  }
-  return counterAboveThreshold;
-}
 
 
 //.... new array having numbers above a certain threshold.....
@@ -106,16 +96,6 @@ const numbersAboveThreshold = function(numbers,threshold) {
 }
 
 
-//....counts how many numbers below a certain threshold.....
-const countNumbersBelow = function(numbers,threshold) {
-  counterBelowThreshold = 0;
-  for(number of numbers){
-    if(isSmaller(number,threshold)){
-      counterBelowThreshold++;
-    }
-  }
-  return counterBelowThreshold;
-}
 
 
 //....numbers below a certain threshold.....
@@ -172,18 +152,6 @@ const findLargestInList = function(numberList){
 }
 
 
-const findGreatest = function(givenList){
-  let greatest = givenList[0];
-  for(number of givenList){
-    if(isGreater(number,greatest)){
-      greatest = number;
-    }
-  }
-  return greatest;
-}
-
-
-
 //.....find smallest number in a list....
 const finDSmallest = function(num1,num2){
   return num1 < num2 ? num1 : num2;
@@ -191,18 +159,6 @@ const finDSmallest = function(num1,num2){
 
 const findSmallestInList = function(numberList){
   return numberList.reduce(finDSmallest);
-}
-
-
-
-const findSmallest = function(givenList){
-  let smallest = givenList[0];
-  for(number of givenList){
-    if(isSmaller(number,smallest)){
-      smallest = number;
-    }
-  }
-  return smallest;
 }
 
 
@@ -216,23 +172,10 @@ const findSumOfList = function(numberList){
 }
 
 
-const findSum = function(numberList){
-  let sum = 0;
-  for(number of numberList){
-    sum = sum + number;
-  }
-  return sum;
-}
-
+//.....find average of a list of numbers...
 const findAverageOfList = function(numberList){
   return findSumOfList(numberList)/numberList.length;
 }
-
-//.....find average of a list of numbers...
-const findAverage = function(numberList){
-  return findSum(numberList)/numberList.length;
-}
-
 
 
 //...Index Of a Number - Given an array of numbers find the first position of a specified number
@@ -380,15 +323,9 @@ module.exports = {
  mapLength,
  isGreater,
  isSmaller,
- countNumbersAbove,
- countNumbersBelow,
  intersect,
  selectEverySecondElement,
  reverse,
- findGreatest,
- findSmallest,
- findSum,
- findAverage,
  findIndexOf,
  unique,
  union,

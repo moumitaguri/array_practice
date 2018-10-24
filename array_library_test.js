@@ -42,18 +42,11 @@ assert.equal(lib.isSmaller(-1,2),true);
 let set1 = [2,2];
 let set2 = [2,1,3];
 let set3 = [2,-1,-2,0];
-assert.equal(lib.countNumbersAbove(set1,2),0);
-assert.equal(lib.countNumbersAbove(set2,1),2);
-assert.equal(lib.countNumbersAbove(set3,-1),2);
 
 assert.equal(lib.countAboveThreshold([],0),0);
 assert.equal(lib.countAboveThreshold(set1,2),0);
 assert.equal(lib.countAboveThreshold(set2,1),2);
 assert.equal(lib.countAboveThreshold([1,1,0,1],-1),4);
-
-assert.equal(lib.countNumbersBelow(set1,2),0);
-assert.equal(lib.countNumbersBelow(set2,2),1);
-assert.equal(lib.countNumbersBelow(set3,2),3);
 
 assert.equal(lib.countBelowThreshold(set1,2),0);
 assert.equal(lib.countBelowThreshold(set2,2),1);
@@ -83,24 +76,12 @@ expected = ["apr","mar","feb","jan"];
 assert.deepEqual(lib.reverse(input),expected);
 
 
-//....print fibonacci series in reverse order...
-
-
-
 //....find greatest number in a list...
-assert.equal(lib.findGreatest([]),);
-assert.equal(lib.findGreatest([3,5,7]),7);
-assert.equal(lib.findGreatest([1,1]),1);
 assert.equal(lib.findLargestInList([3,5,7]),7);
 assert.equal(lib.findLargestInList([1,1]),1);
 
 
 //....find smallest number in a list...
-assert.equal(lib.findSmallest([]),);
-assert.equal(lib.findSmallest([3,5,7]),3);
-assert.equal(lib.findSmallest([1,1]),1);
-assert.equal(lib.findSmallest([26,3,1,5]),1);
-
 assert.equal(lib.findSmallestInList([3,5,7]),3);
 assert.equal(lib.findSmallestInList([1,1]),1);
 assert.equal(lib.findSmallestInList([26,3,1,5]),1);
@@ -110,9 +91,6 @@ assert.equal(lib.findSmallestInList([26,3,1,5]),1);
 //....sum of a list of numbers....
 numbers = [1,2,3,4,5,6,7,8,9,10];
 expectedSum= 55;
-assert.equal(lib.findSum([]),0);
-assert.equal(lib.findSum(numbers),expectedSum);
-
 assert.equal(lib.findSumOfList([1,0]),1);
 assert.equal(lib.findSumOfList(numbers),expectedSum);
 
@@ -120,8 +98,6 @@ assert.equal(lib.findSumOfList(numbers),expectedSum);
 //...find average of a list of numbers...
 numbers = [1,2,3,4,5,6,7,8,9,10];
 average = 5.5;
-assert.equal(lib.findAverage(numbers),average);
-
 assert.equal(lib.findAverageOfList(numbers),average);
 
 
