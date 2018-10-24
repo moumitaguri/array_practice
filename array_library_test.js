@@ -46,6 +46,11 @@ assert.equal(lib.countNumbersAbove(set1,2),0);
 assert.equal(lib.countNumbersAbove(set2,1),2);
 assert.equal(lib.countNumbersAbove(set3,-1),2);
 
+assert.equal(lib.countAboveThreshold([],0),0);
+assert.equal(lib.countAboveThreshold(set1,2),0);
+assert.equal(lib.countAboveThreshold(set2,1),2);
+assert.equal(lib.countAboveThreshold([1,1,0,1],-1),4);
+
 assert.equal(lib.countNumbersBelow(set1,2),0);
 assert.equal(lib.countNumbersBelow(set2,2),1);
 assert.equal(lib.countNumbersBelow(set3,2),3);

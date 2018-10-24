@@ -57,6 +57,21 @@ const isSmallerOrEqual = function(num1,num2) {
 }
 
 //....counts how many numbers above a certain threshold.....
+
+const findNumbersAboveThreshold = function(threshold){
+  return function(num){
+    return num > threshold;
+    }
+  }
+
+const countAboveThreshold = function(givenList,threshold){
+  let findAboveThreshold = findNumbersAboveThreshold(threshold);
+  return givenList.filter(findAboveThreshold).length;
+}
+
+
+
+
 const countNumbersAbove = function(numbers,threshold) {
   counterAboveThreshold = 0;
   for(number of numbers){
@@ -368,5 +383,6 @@ module.exports = {
  reverseFib,
  findLargestInList,
  findSmallestInList,
- mapLengths
+ mapLengths,
+ countAboveThreshold
 };
