@@ -71,6 +71,17 @@ const countAboveThreshold = function(givenList,threshold){
 
 
 
+const findNumbersBelowThreshold = function(threshold){
+  return function(num){
+    return num < threshold;
+    }
+  }
+
+const countBelowThreshold = function(givenList,threshold){
+  let findBelowThreshold = findNumbersBelowThreshold(threshold);
+  return givenList.filter(findBelowThreshold).length;
+}
+
 
 const countNumbersAbove = function(numbers,threshold) {
   counterAboveThreshold = 0;
@@ -373,16 +384,17 @@ module.exports = {
  difference,
  zip,
  rotate,
- numbersAboveThreshold,
- numbersBelowThreshold,
  partition,
- extractDigits,
  isInDecending,
  isInAscending,
- isSubset,
+ extractDigits,
  reverseFib,
- findLargestInList,
- findSmallestInList,
+ isSubset,
+ countAboveThreshold,
  mapLengths,
- countAboveThreshold
+ findSmallestInList,
+ findLargestInList,
+ numbersAboveThreshold,
+ numbersBelowThreshold,
+ countBelowThreshold
 };

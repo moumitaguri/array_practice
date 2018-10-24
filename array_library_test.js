@@ -55,6 +55,10 @@ assert.equal(lib.countNumbersBelow(set1,2),0);
 assert.equal(lib.countNumbersBelow(set2,2),1);
 assert.equal(lib.countNumbersBelow(set3,2),3);
 
+assert.equal(lib.countBelowThreshold(set1,2),0);
+assert.equal(lib.countBelowThreshold(set2,2),1);
+assert.equal(lib.countBelowThreshold(set3,2),3);
+
 numberSet1 = [1,5,6,7,4,3,9,2];
 numberSet2 = [1,4,2,3,0,9];
 expected = [1,4,3,9,2];
