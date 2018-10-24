@@ -122,6 +122,8 @@ numbers = [1,2,3,4,5,6,7,8,9,10];
 average = 5.5;
 assert.equal(lib.findAverage(numbers),average);
 
+assert.equal(lib.findAverageOfList(numbers),average);
+
 
 //..Index Of a Number - Given an array of numbers find the first position of a specified number
 numbers = [1,4,2,3,7,3,2,1,4];

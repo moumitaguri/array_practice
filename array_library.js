@@ -224,7 +224,9 @@ const findSum = function(numberList){
   return sum;
 }
 
-
+const findAverageOfList = function(numberList){
+  return findSumOfList(numberList)/numberList.length;
+}
 
 //.....find average of a list of numbers...
 const findAverage = function(numberList){
@@ -406,5 +408,6 @@ module.exports = {
  numbersAboveThreshold,
  numbersBelowThreshold,
  countBelowThreshold,
- findSumOfList
+ findSumOfList,
+ findAverageOfList
 };
