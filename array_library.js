@@ -190,6 +190,17 @@ const findIndexOf = function(numberList,numberToFind){
 
 
 //.....Unique - Given an array, remove duplicate elements and return an array of only unique elements.
+const findUnique = function(uniqueSet,element){
+  if(!uniqueSet.includes(element)){
+    uniqueSet.push(element);
+  }
+  return uniqueSet;
+}
+
+const findUniqueSet = function(numberList){
+  return numberList.reduce(findUnique,[]);
+}
+
 const unique = function(givenSet){
   let uniqueSet = [];
   for(let element of givenSet){
@@ -346,5 +357,6 @@ module.exports = {
  numbersBelowThreshold,
  countBelowThreshold,
  findSumOfList,
- findAverageOfList
+ findAverageOfList,
+ findUniqueSet
 };

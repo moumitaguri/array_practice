@@ -120,6 +120,10 @@ expected = ["a","b","c"];
 assert.deepEqual(lib.unique(input),expected);
 assert.deepEqual(lib.unique([]),[]);
 
+assert.deepEqual(lib.findUniqueSet(input),expected);
+assert.deepEqual(lib.findUniqueSet([]),[]);
+
+
 
 //..Union - Given two arrays, generate a new array consisting of unique elements across both those arrays.
 set1 = [1,0];
