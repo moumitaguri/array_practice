@@ -113,6 +113,9 @@ expectedSum= 55;
 assert.equal(lib.findSum([]),0);
 assert.equal(lib.findSum(numbers),expectedSum);
 
+assert.equal(lib.findSumOfList([1,0]),1);
+assert.equal(lib.findSumOfList(numbers),expectedSum);
+
 
 //...find average of a list of numbers...
 numbers = [1,2,3,4,5,6,7,8,9,10];

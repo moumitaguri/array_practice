@@ -207,6 +207,15 @@ const findSmallest = function(givenList){
 
 
 //....find sum of a list of numbers...
+const sum = function(num1,num2){
+  return num1 + num2;
+}
+
+const findSumOfList = function(numberList){
+  return numberList.reduce(sum);
+}
+
+
 const findSum = function(numberList){
   let sum = 0;
   for(number of numberList){
@@ -396,5 +405,6 @@ module.exports = {
  findLargestInList,
  numbersAboveThreshold,
  numbersBelowThreshold,
- countBelowThreshold
+ countBelowThreshold,
+ findSumOfList
 };
