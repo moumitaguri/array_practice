@@ -23,10 +23,12 @@ assert.equal(lib.countOddNumbers([]),0);
 assert.equal(lib.countOddNumbers([1,0,2]),1);
 assert.equal(lib.countOddNumbers([0,-2,4,3,-1]),2);
 
-assert.deepEqual(lib.mapLength([""]),[0]);
-assert.deepEqual(lib.mapLength(["saturday"]),[8]);
-assert.deepEqual(lib.mapLength(["sunday","monday"]),[6,6]);
-assert.deepEqual(lib.mapLength(["sunday","monday",""]),[6,6,0]);
+assert.deepEqual(lib.mapLengths(["a"]),[1]);
+assert.deepEqual(lib.mapLengths(["a","ab"]),[1,2]);
+
+assert.deepEqual(lib.mapLengths(["saturday"]),[8]);
+assert.deepEqual(lib.mapLengths(["sunday","monday"]),[6,6]);
+assert.deepEqual(lib.mapLengths(["sunday","monday",""]),[6,6,0]);
 
 
 assert.equal(lib.isGreater(1,2),false);

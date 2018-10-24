@@ -31,12 +31,12 @@ const countOddNumbers = function(numberList) {
 
 
 //.....maps lengths of of every names of the given list and puts in another array....
-const mapLength = function(elements) {
-  let elementLengths = [];
-  for ( let element of elements ){
-    elementLengths.push(element.length);
-  }
-  return elementLengths;
+const mapLength = function(element) {
+  return element.length;
+}
+
+const mapLengths = function(givenList){
+  return givenList.map(mapLength);
 }
 
 
@@ -367,5 +367,6 @@ module.exports = {
  isSubset,
  reverseFib,
  findLargestInList,
- findSmallestInList
+ findSmallestInList,
+ mapLengths
 };
